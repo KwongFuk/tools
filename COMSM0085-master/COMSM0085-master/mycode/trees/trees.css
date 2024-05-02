@@ -1,0 +1,56 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #04443c;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    padding-left: 50px;
+}
+
+.card {
+    background-color: #167f5f;
+    color: white;
+}
+
+.card-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.card span.latin-name {
+    display: block;
+    font-style: italic;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.card span.common-name {
+    display: block;
+    padding: 10px;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 四个等宽的列 */
+    gap: 20px;
+    padding: 20px 10px; /* 上下填充为20px，左右填充为10px */
+    margin: 0 auto; /* 水平居中 */
+    max-width: 960px; /* 最大宽度 */
+}
+
+.featured {
+    grid-column: span 2; /* 特色树占据 2 列 */
+    grid-row: span 2; /* 特色树占据 2 行 */
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 两个等宽的列 */
+    }
+}

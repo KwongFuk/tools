@@ -1,0 +1,68 @@
+body {
+    font-family: sans-serif;
+    background-color: rgba(112, 145, 53, 0.1);
+}
+
+.unit {
+    background-color: rgba(0, 67, 79, 0.2);
+	padding: 10px;
+    border: 1px solid #ccc;
+    /* 默认为 1 行高 */
+    grid-row: span 1;
+}
+
+.unit b {
+    display: block;
+    background-color: rgb(0, 67, 79);
+    color: white;
+    padding: 5px;
+}
+
+.unit p {
+    padding: 5px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12列等宽 */
+    max-width: 1500px; /* 最大宽度为1500px */
+    margin: 0 auto; /* 居中 */
+    gap: 15px; /* 网格单元之间的间隙为15px */
+
+	grid-row-gap: 20px;
+}
+
+
+/* 10CP 单元应占据 12 列宽度中的 2 列 */
+.cp10 {
+    grid-column: span 2;
+}
+
+/* 15CP 单元应占据 3 列 */
+.cp15 {
+    grid-column: span 3;
+}
+
+/* 20CP 单元应占据 4 列 */
+.cp20 {
+    grid-column: span 4;
+}
+
+/* 40CP 单元应占据 8 列 */
+.cp40 {
+    grid-column: span 8;
+}
+
+.y2-tb4 {
+    grid-area: 4/  11/ 6 /13;
+	
+}
+
+.whiterow{
+	grid-column: span 12;
+	background-color: transparent;
+	border: none;
+}
+
+
+
